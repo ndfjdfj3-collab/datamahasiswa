@@ -35,7 +35,6 @@ if (isset($_GET['nim'])) {
     }
 }
 
-
 //UPDATE
 if (isset($_POST['ubah'])) {
     $nim = $_POST['nim'];
