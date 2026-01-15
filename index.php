@@ -38,12 +38,20 @@ if(!isset($_SESSION['login'])){
                         <a class="nav-link" href="index.php?page=prodi">Data Prodi</a>
                     </li>
                 </ul>
-                <!-- LOGOUT BUTTON -->
+                <!-- PROFILE -->
+                <ul class="navbar-nav align-items-center me-2">
+                    <li class="nav-item">
+                        <a class="btn btn-primary btn-sm"
+                        href="index.php?page=profil">
+                         Profil </a>
+                    </li>
+                </ul>
+                <!-- LOGOUT  -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="btn btn-danger btn-sm"
                         href="logout.php"
-                        onclick="return confirm('Yakin ingin logout?')"> Logout </a>
+                        onclick="return confirm('Yakin ingin keluar?')"> Logout </a>
                     </li>
                 </ul>
             </div>
@@ -74,6 +82,9 @@ if(!isset($_SESSION['login'])){
                     break;
                 case 'prodi_update':
                     include 'prodi/edit.php';
+                    break;
+                case 'profil':
+                    include 'edit_profil.php';
                     break;
                 default:
                     include 'home.php';
